@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import CountUp from "@/components/ui/CountUp";
 import {
   Select,
   SelectContent,
@@ -15,11 +16,34 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-36 lg:pb-24 gradient-hero overflow-hidden min-h-screen flex items-center"
+      className="relative pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-36 lg:pb-24 overflow-hidden min-h-screen flex items-center"
+      style={{
+        background:
+          "linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 25%, #e8f4fd 50%, #dbeafe 75%, #ede9fe 100%)",
+      }}
     >
+      {/* Gradient mesh overlays */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse at 20% 50%, rgba(56,189,248,0.18) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(99,102,241,0.13) 0%, transparent 55%), radial-gradient(ellipse at 60% 80%, rgba(6,182,212,0.12) 0%, transparent 50%)",
+        }}
+      />
+
       {/* Decorative blobs */}
-      <div className="absolute top-20 left-0 w-48 h-48 sm:w-72 sm:h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-5 sm:right-10 w-64 h-64 sm:w-96 sm:h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
+      <div
+        className="absolute top-20 left-0 w-48 h-48 sm:w-72 sm:h-72 rounded-full blur-3xl pointer-events-none"
+        style={{ background: "rgba(56,189,248,0.22)" }}
+      />
+      <div
+        className="absolute bottom-0 right-5 sm:right-10 w-64 h-64 sm:w-96 sm:h-96 rounded-full blur-3xl pointer-events-none"
+        style={{ background: "rgba(99,102,241,0.15)" }}
+      />
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-3xl pointer-events-none"
+        style={{ background: "rgba(14,165,233,0.08)" }}
+      />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center relative z-10 w-full">
         {/* Left — Hero Copy */}
@@ -49,15 +73,8 @@ const HeroSection = () => {
           <div className="flex flex-col xs:flex-row flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
             <Button
               size="lg"
-              className="gradient-medical border-0 text-primary-foreground px-6 sm:px-8 shadow-soft w-full xs:w-auto"
-            >
-              <CalendarDays className="mr-2 shrink-0" size={18} />
-              Book Appointment
-            </Button>
-            <Button
-              size="lg"
               variant="outline"
-              className="border-primary/20 text-foreground hover:bg-secondary w-full xs:w-auto"
+              className="gradient-medical border-0 text-primary-foreground px-6 sm:px-8 shadow-soft w-full xs:w-auto"
             >
               Learn More
             </Button>
@@ -66,13 +83,13 @@ const HeroSection = () => {
           {/* Quick stats */}
           <div className="flex justify-center lg:justify-start gap-6 sm:gap-8 mt-8 sm:mt-10">
             {[
-              { num: "10+", label: "Years Exp." },
-              { num: "5k+", label: "Patients" },
-              { num: "98%", label: "Satisfaction" },
+              { val: 10, suffix: "+", label: "Years Exp." },
+              { val: 5000, suffix: "+", label: "Patients" },
+              { val: 98, suffix: "%", label: "Satisfaction" },
             ].map((s) => (
               <div key={s.label} className="text-center lg:text-left">
                 <p className="text-xl sm:text-2xl font-heading font-bold text-primary">
-                  {s.num}
+                  <CountUp to={s.val} duration={2} />{s.suffix}
                 </p>
                 <p className="text-[10px] sm:text-xs text-muted-foreground">
                   {s.label}

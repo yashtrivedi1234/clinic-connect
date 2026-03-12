@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Award, CheckCircle2 } from "lucide-react";
 import clinicImg from "@/assets/clinic-about.jpg";
+import CountUp from "@/components/ui/CountUp";
 
 const credentials = ["MBBS", "MD – Neurology", "Fellowship in Vestibular Medicine", "Member – AAN"];
 
@@ -25,7 +26,9 @@ const AboutSection = () => (
         <div className="absolute -bottom-6 -right-6 bg-primary rounded-xl p-5 shadow-elevated hidden md:flex items-center gap-3">
           <Award className="text-primary-foreground" size={28} />
           <div>
-            <p className="font-heading font-bold text-primary-foreground text-lg">10+ Years</p>
+            <p className="font-heading font-bold text-primary-foreground text-lg">
+              <CountUp to={10} duration={2} />+ Years
+            </p>
             <p className="text-primary-foreground/80 text-xs">of Excellence</p>
           </div>
         </div>

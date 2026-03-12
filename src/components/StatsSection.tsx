@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { Clock, Users, ThumbsUp, Layers } from "lucide-react";
+import CountUp from "@/components/ui/CountUp";
 
 const stats = [
-  { icon: Clock, value: "10+", label: "Years Experience" },
-  { icon: Users, value: "5000+", label: "Patients Treated" },
-  { icon: ThumbsUp, value: "98%", label: "Patient Satisfaction" },
-  { icon: Layers, value: "20+", label: "Advanced Treatments" },
+  { icon: Clock, value: 10, suffix: "+", label: "Years Experience" },
+  { icon: Users, value: 5000, suffix: "+", label: "Patients Treated" },
+  { icon: ThumbsUp, value: 98, suffix: "%", label: "Patient Satisfaction" },
+  { icon: Layers, value: 20, suffix: "+", label: "Advanced Treatments" },
 ];
 
 const StatsSection = () => (
@@ -23,7 +24,9 @@ const StatsSection = () => (
             className="text-center"
           >
             <s.icon className="mx-auto mb-3 text-primary-foreground/80" size={32} />
-            <p className="text-3xl lg:text-4xl font-heading font-extrabold text-primary-foreground mb-1">{s.value}</p>
+            <p className="text-3xl lg:text-4xl font-heading font-extrabold text-primary-foreground mb-1">
+              <CountUp to={s.value} duration={2} />{s.suffix}
+            </p>
             <p className="text-sm text-primary-foreground/80">{s.label}</p>
           </motion.div>
         ))}
