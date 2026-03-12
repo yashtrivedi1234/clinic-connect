@@ -3,7 +3,7 @@ import { CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CTASection = () => (
-  <section className="py-20 lg:py-28">
+  <section className="py-8 lg:py-8">
     <div className="container mx-auto">
       <motion.div
         initial={{ opacity: 0, scale: 0.97 }}

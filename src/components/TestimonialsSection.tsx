@@ -10,7 +10,7 @@ const testimonials = [
   },
   {
     name: "Rahul Mehta",
-    review: "I had been struggling with chronic migraines for years. Dr. Sharma's personalized approach changed my life. Highly recommended!",
+    review: "I had been struggling with chronic migraines for years. Dr. Prashant personalized approach changed my life. Highly recommended!",
     rating: 5,
   },
   {
@@ -34,10 +34,10 @@ const TestimonialsSection = () => {
   const t = testimonials[current];
 
   return (
-    <section id="testimonials" className="py-20 lg:py-28">
+    <section id="testimonials" className="py-8 lg:py-8">
       <div className="container mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-xs font-semibold mb-4 uppercase tracking-wide">
+        <div className="text-center max-w-2xl mx-auto mb-5">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-xs font-semibold uppercase tracking-wide">
             Testimonials
           </span>
           <h2 className="text-3xl lg:text-4xl font-heading font-bold text-foreground mb-4">

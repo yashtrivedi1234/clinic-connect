@@ -12,7 +12,7 @@ const highlights = [
 ];
 
 const AboutSection = () => (
-  <section id="about" className="py-20 lg:py-28 bg-card">
+  <section id="about" className="py-8 lg:py-8 bg-card">
     <div className="container mx-auto grid lg:grid-cols-2 gap-14 items-center">
       <motion.div
         initial={{ opacity: 0, x: -30 }}
@@ -37,14 +37,14 @@ const AboutSection = () => (
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-xs font-semibold mb-4 uppercase tracking-wide">
+        <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-xs font-semibold uppercase tracking-wide">
           About Us
         </span>
         <h2 className="text-3xl lg:text-4xl font-heading font-bold text-foreground mb-4">
-          Meet <span className="text-primary">Dr. Rajesh Sharma</span>
+          Meet <span className="text-primary">Dr. Prashant</span>
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          With over a decade of experience in neurology and vestibular medicine, Dr. Sharma leads our clinic
+          With over a decade of experience in neurology and vestibular medicine, Dr. Prashant leads our clinic
           with a commitment to accurate diagnosis, personalized treatment plans, and compassionate patient care.
         </p>
 

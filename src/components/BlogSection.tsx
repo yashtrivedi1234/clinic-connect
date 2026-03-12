@@ -13,10 +13,10 @@ const posts = [
 ];
 
 const BlogSection = () => (
-  <section id="blog" className="py-20 lg:py-28 bg-card">
+  <section id="blog" className="py-8 lg:py-8 bg-card">
     <div className="container mx-auto">
-      <div className="text-center max-w-2xl mx-auto mb-14">
-        <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-xs font-semibold mb-4 uppercase tracking-wide">
+      <div className="text-center max-w-2xl mx-auto mb-5">
+        <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-xs font-semibold  uppercase tracking-wide">
           Latest Articles
         </span>
         <h2 className="text-3xl lg:text-4xl font-heading font-bold text-foreground mb-4">
