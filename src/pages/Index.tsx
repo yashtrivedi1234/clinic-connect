@@ -9,7 +9,7 @@ import BlogSection from "@/components/BlogSection";
 import CTASection from "@/components/CTASection";
 import FooterSection from "@/components/FooterSection";
 import ScrollToTop from "@/components/ScrollToTop";
-import ChatbotButton from "@/components/ChatbotButton";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -27,7 +27,7 @@ const Index = () => {
       </main>
       <FooterSection />
       <ScrollToTop />
-      <ChatbotButton />
+      <WhatsAppButton />
     </div>
   );
 };
