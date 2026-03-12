@@ -19,7 +19,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-xs font-semibold mb-6 tracking-wide uppercase">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-xs font-semibold tracking-wide uppercase">
             Trusted Healthcare Since 2014
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] leading-tight font-heading font-extrabold text-foreground mb-6">
