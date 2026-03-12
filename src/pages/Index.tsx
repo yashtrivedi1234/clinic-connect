@@ -8,6 +8,8 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import BlogSection from "@/components/BlogSection";
 import CTASection from "@/components/CTASection";
 import FooterSection from "@/components/FooterSection";
+import ScrollToTop from "@/components/ScrollToTop";
+import ChatbotButton from "@/components/ChatbotButton";
 
 const Index = () => {
   return (
@@ -24,6 +26,8 @@ const Index = () => {
         <CTASection />
       </main>
       <FooterSection />
+      <ScrollToTop />
+      <ChatbotButton />
     </div>
   );
 };
