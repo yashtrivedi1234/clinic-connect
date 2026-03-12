@@ -41,7 +41,7 @@ const Header = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-mb font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-mb font-medium text-black hover:text-primary transition-colors"
             >
               {link.label}
             </a>
@@ -49,7 +49,7 @@ const Header = () => {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:+1234567890" className="flex items-center gap-2 text-sm text-muted-foreground">
+          <a href="tel:+1234567890" className="flex items-center gap-2 text-sm text-black">
             <Phone size={16} />
             +1 (234) 567-890
           </a>
