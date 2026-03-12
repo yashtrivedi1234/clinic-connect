@@ -24,7 +24,7 @@ const HeroSection = () => {
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] leading-tight font-heading font-extrabold text-foreground mb-6">
             Expert Care for Your{" "}
-            <span className="bg-clip-text text-transparent gradient-medical">
+            <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 bg-clip-text text-transparent">
               Health & Wellbeing
             </span>
           </h1>
@@ -65,11 +65,7 @@ const HeroSection = () => {
           className="relative"
         >
           {/* Doctor image behind form */}
-          <img
-            src={doctorImg}
-            alt="Doctor"
-            className="absolute -top-16 -right-8 w-48 opacity-20 lg:opacity-30 pointer-events-none select-none hidden md:block"
-          />
+        
 
           <div className="bg-card rounded-2xl shadow-elevated p-8 border border-border relative z-10">
             <h3 className="font-heading font-bold text-xl text-foreground mb-1">Book Your Appointment</h3>
