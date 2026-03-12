@@ -45,13 +45,13 @@ const HeroSection = () => {
         style={{ background: "rgba(14,165,233,0.08)" }}
       />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center relative z-10 w-full">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-8 items-center relative z-10 w-full">
         {/* Left — Hero Copy */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center lg:text-left"
+          className="text-center lg:text-left lg:col-span-1"
         >
           <span className="inline-block px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-secondary text-secondary-foreground text-[10px] sm:text-xs font-semibold tracking-wide uppercase mb-4">
             Trusted Healthcare Since 2014
@@ -99,12 +99,64 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
+        {/* Center — Doctor Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
+          className="hidden lg:flex lg:col-span-1 justify-center items-end relative"
+        >
+          {/* Decorative circle behind image */}
+          <div
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(ellipse, rgba(56,189,248,0.25) 0%, rgba(99,102,241,0.15) 60%, transparent 100%)",
+            }}
+          />
+
+          {/* Floating badge — top left */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="absolute top-8 -left-4 bg-white rounded-2xl shadow-elevated px-3 py-2 flex items-center gap-2 border border-border z-20"
+          >
+            <span className="text-lg">🏥</span>
+            <div>
+              <p className="text-[10px] font-semibold text-foreground leading-none">Certified Clinic</p>
+              <p className="text-[9px] text-muted-foreground leading-none mt-0.5">ISO Accredited</p>
+            </div>
+          </motion.div>
+
+          {/* Floating badge — bottom right */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            className="absolute bottom-12 -right-4 bg-white rounded-2xl shadow-elevated px-3 py-2 flex items-center gap-2 border border-border z-20"
+          >
+            <span className="text-lg">⭐</span>
+            <div>
+              <p className="text-[10px] font-semibold text-foreground leading-none">4.9 / 5 Rating</p>
+              <p className="text-[9px] text-muted-foreground leading-none mt-0.5">2,400+ Reviews</p>
+            </div>
+          </motion.div>
+
+          <img
+            src={doctorImg}
+            alt="Doctor"
+            className="relative z-10 w-full max-w-xs object-contain drop-shadow-2xl select-none"
+            draggable={false}
+          />
+        </motion.div>
+
         {/* Right — Booking Form */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative w-full max-w-md mx-auto lg:max-w-none"
+          className="relative w-full max-w-md mx-auto lg:max-w-none lg:col-span-1"
         >
           <div className="bg-card rounded-2xl shadow-elevated p-5 sm:p-8 border border-border relative z-10">
             <h3 className="font-heading font-bold text-lg sm:text-xl text-foreground mb-1">
