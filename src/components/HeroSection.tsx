@@ -18,10 +18,22 @@ const HeroSection = () => {
       id="home"
       className="relative pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-36 lg:pb-24 overflow-hidden min-h-screen flex items-center"
       style={{
-        background:
-          "linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 25%, #e8f4fd 50%, #dbeafe 75%, #ede9fe 100%)",
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1920&q=80&auto=format&fit=crop')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
+      {/* ── Primary gradient overlay — same colours as before, layered on top of the image ── */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(135deg, rgba(224,242,254,0.92) 0%, rgba(240,249,255,0.90) 25%, rgba(232,244,253,0.88) 50%, rgba(219,234,254,0.90) 75%, rgba(237,233,254,0.92) 100%)",
+        }}
+      />
+
       {/* Gradient mesh overlays */}
       <div
         className="absolute inset-0 pointer-events-none"
